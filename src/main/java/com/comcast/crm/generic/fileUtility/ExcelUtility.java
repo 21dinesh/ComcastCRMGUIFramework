@@ -61,4 +61,12 @@ public class ExcelUtility {
 		workbook.write(fos);
 		workbook.close();
 	}
+
+	public void getcellCount(String sheetName, int rowNum){
+		FileInputStream fis = new FileInputStream("./testData/testscriptdata.xlsx");
+		Workbook workbook = WorkbookFactory.create(fis);
+		workbook.getSheet(sheetName).getRow(rowNum).getlastcellNum()
+		
+	}
+	
 }
